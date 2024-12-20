@@ -1,6 +1,6 @@
 @extends('layouts.loginparts')
 
-@section('assets', '/Public/Themes/<themeName>/Assets/')
+@section('assets', '/Public/Themes/jonikinsTheme/Assets/')
 
 @section('content')
     {!! $content !!}
