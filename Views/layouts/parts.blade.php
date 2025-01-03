@@ -8,7 +8,7 @@
             shrink-to-fit=no">
         <meta name="description" content="Homely - Real Estate HTML5 Template">
 
-        <title>Homely - Real Estate HTML5 Template</title>
+        <title>@yield('title')</title>
 
         <!-- Favicon -->
         <link rel="shortcut icon" type="image/x-icon" href="@yield('assets')media/favicon-dark.png">
@@ -23,7 +23,7 @@
         <link href="/color-scheme.css" rel="stylesheet" />
         <link rel="stylesheet" href="@yield('assets')css/app.css">
 
-        <script async="" src="../../../gtag/js?id=UA-266165434-1"></script>
+        <!-- <script async="" src="../../../gtag/js?id=UA-266165434-1"></script> -->
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -75,6 +75,7 @@
                                 S
                             </span>
                         </div>
+                        <p class="text-center">Apartments</p>
                     </div>	
                     <div class="loader-section section-left"></div>
                     <div class="loader-section section-right"></div>
@@ -132,14 +133,14 @@
 
                 <!-- inner banner Area start -->
                 <section class="inner-banner">
-                    <div class="container">
+                    <!-- <div class="container">
                         <h2>Contact Us</h2>
-                    </div>
+                    </div> -->
                 </section>
                 <!-- inner banner Area end -->
 
                 <!-- properties detail Area start -->
-                <section class="properties-detail bg-white p-100">
+                <section class="properties-detail bg-white-2 p-100">
                     <div class="container">
                         @section('content')
                             @yield('content') 

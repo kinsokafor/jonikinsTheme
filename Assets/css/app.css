@@ -70,7 +70,7 @@ section:after {
   position: relative;
 }
 
-.input-group {
+.input-group, .k-input-group {
   position: relative;
   background: transparent;
   box-shadow: none;
@@ -100,6 +100,9 @@ section:after {
 .form-control::placeholder {
   color: #797D86;
   opacity: 1;
+}
+.form-control::placeholder {
+  opacity: 0.2 !important;
 }
 
 .form-group .form-control {
@@ -1020,6 +1023,10 @@ body:not(.is-mobile).ui-smooth-scroll #scroll-container {
 
 .bg-white {
   background-color: #FAFAFA !important;
+}
+
+.bg-white-2 {
+  background-color: #cacbcf !important;
 }
 
 .bg-primary {
@@ -2288,13 +2295,13 @@ nav .navbar-toggler:focus {
   }
 }
 .header nav .navbar-nav .menu-item-has-children a.active {
-  color: var(--main-color);
+  color: var(--orange);
 }
 .header nav .navbar-nav .menu-item-has-children a:hover {
-  color: var(--main-color);
+  color: var(--orange);
 }
 .header nav .navbar-nav .menu-item-has-children a:hover svg {
-  stroke: var(--main-color);
+  stroke: var(--orange);
 }
 .header nav .navbar-nav .menu-item-has-children .submenu li a {
   color: #2C2D2F;
@@ -2302,10 +2309,10 @@ nav .navbar-toggler:focus {
   font-size: 19px;
 }
 .header nav .navbar-nav .menu-item-has-children .submenu li a.active {
-  color: var(--main-color);
+  color: var(--orange);
 }
 .header nav .navbar-nav .menu-item-has-children .submenu li a:hover {
-  color: var(--main-color);
+  color: var(--orange);
 }
 .header.st-1 {
   position: absolute;
@@ -2634,14 +2641,14 @@ nav .navbar-toggler:focus {
   background: url(../media/banner/inner-banner-bg.png);
   background-position: center;
   background-size: cover;
-  height: clamp(350px, 26.042vw, 600px);
+  height: clamp(60px, 26.042vw, 100px);
   display: grid;
   align-content: center;
   padding-top: 5%;
 }
 @media (max-width: 768px) {
   .inner-banner {
-    height: 250px;
+    height: 100px;
   }
 }
 .inner-banner h2 {
@@ -2952,27 +2959,27 @@ nav .navbar-toggler:focus {
   color: var(--main-color);
 }
 
-.testimonial .testimonial-block {
+.testimonial-block {
   position: relative;
   background: #FAFAFA;
   border-radius: 10px;
   margin: 0 12px;
   overflow: hidden;
 }
-.testimonial .testimonial-block .quote {
+.testimonial-block .quote {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 10;
 }
-.testimonial .testimonial-block .user-img {
+.testimonial-block .user-img {
   padding-top: 50px;
   text-align: center;
 }
-.testimonial .testimonial-block .user-img img {
+.testimonial-block .user-img img {
   margin: -100px auto 8px;
 }
-.testimonial .testimonial-block .name {
+.testimonial-block .name {
   font-weight: 500;
   font-size: clamp(19px, 1.2vw, 32px);
   line-height: 130%;
@@ -2981,7 +2988,7 @@ nav .navbar-toggler:focus {
   color: #0D0D0D;
   margin-bottom: 8px;
 }
-.testimonial .testimonial-block p {
+.testimonial-block p {
   padding: 0 clamp(18px, 1.66vw, 40px);
   font-family: "Inter", sans-serif;
   text-align: center;
