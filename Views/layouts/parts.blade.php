@@ -140,7 +140,7 @@
                 <!-- inner banner Area end -->
 
                 <!-- properties detail Area start -->
-                <section class="properties-detail bg-white-2 p-100">
+                <section class="bg-white-2 p-100">
                     <div class="container">
                         @section('content')
                             @yield('content') 

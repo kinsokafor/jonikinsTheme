@@ -111,10 +111,10 @@ section:after {
   border-radius: 5px;
   border: 1px solid #0D0D0D;
 }
-
+/* 
 textarea {
   height: 240px;
-}
+} */
 
 .input-group button {
   background: transparent;

@@ -31,13 +31,13 @@
       Init.w();
       Init.BackToTop();
       Init.preloader();
-      Init.smoothScroll();
+      // Init.smoothScroll();
       Init.dropdown();
-      Init.intializeSlick();
-      Init.formValidation();
-      Init.contactForm();
-      Init.videoPlay();
-      Init.jsSlider();
+      // Init.intializeSlick();
+      // Init.formValidation();
+      // Init.contactForm();
+      // Init.videoPlay();
+      // Init.jsSlider();
     },
     w: function (e) {
       this._window.on("load", Init.l).on("scroll", Init.res);
@@ -75,103 +75,103 @@
         }
       }, 3000);
     },
-    smoothScroll: function () {
-      if ($("body").hasClass("ui-smooth-scroll")) {
-        // Not for mobile devices!
-        if (!isMobile) {
-          const Scrollbar = window.Scrollbar;
+    // smoothScroll: function () {
+    //   if ($("body").hasClass("ui-smooth-scroll")) {
+    //     // Not for mobile devices!
+    //     if (!isMobile) {
+    //       const Scrollbar = window.Scrollbar;
     
-          class AnchorPlugin extends Scrollbar.ScrollbarPlugin {
-            static pluginName = "anchor";
+    //       class AnchorPlugin extends Scrollbar.ScrollbarPlugin {
+    //         static pluginName = "anchor";
     
-            onHashChange = () => {
-              // Only handle smooth scroll if the hash is not managed by Vue Router
-              if (!this.isVueManagedHash(window.location.hash)) {
-                this.jumpToHash(window.location.hash);
-              }
-            };
+    //         onHashChange = () => {
+    //           // Only handle smooth scroll if the hash is not managed by Vue Router
+    //           if (!this.isVueManagedHash(window.location.hash)) {
+    //             this.jumpToHash(window.location.hash);
+    //           }
+    //         };
     
-            onClick = (event) => {
-              const { target } = event;
-              if (target.tagName !== "A") {
-                return;
-              }
-              const hash = target.getAttribute("href");
-              if (!hash || hash.charAt(0) !== "#" || this.isVueManagedHash(hash)) {
-                return;
-              }
-              this.jumpToHash(hash);
-            };
+    //         onClick = (event) => {
+    //           const { target } = event;
+    //           if (target.tagName !== "A") {
+    //             return;
+    //           }
+    //           const hash = target.getAttribute("href");
+    //           if (!hash || hash.charAt(0) !== "#" || this.isVueManagedHash(hash)) {
+    //             return;
+    //           }
+    //           this.jumpToHash(hash);
+    //         };
     
-            jumpToHash = (hash) => {
-              if (!hash) {
-                return;
-              }
-              const { scrollbar } = this;
-              const target = document.querySelector(hash);
-              if (target) {
-                scrollbar.scrollIntoView(target, {
-                  offsetTop: parseFloat(target.getAttribute("data-offset")) || 0, // Set default offset
-                });
-              }
-            };
+    //         jumpToHash = (hash) => {
+    //           if (!hash) {
+    //             return;
+    //           }
+    //           const { scrollbar } = this;
+    //           const target = document.querySelector(hash);
+    //           if (target) {
+    //             scrollbar.scrollIntoView(target, {
+    //               offsetTop: parseFloat(target.getAttribute("data-offset")) || 0, // Set default offset
+    //             });
+    //           }
+    //         };
     
-            isVueManagedHash = (hash) => {
-              // Logic to determine if Vue Router should manage this hash scroll
-              return Boolean(document.querySelector(`[data-vue-router="${hash}"]`));
-            };
+    //         isVueManagedHash = (hash) => {
+    //           // Logic to determine if Vue Router should manage this hash scroll
+    //           return Boolean(document.querySelector(`[data-vue-router="${hash}"]`));
+    //         };
     
-            onInit() {
-              window.addEventListener("hashchange", this.onHashChange);
-              this.scrollbar.contentEl.addEventListener("click", this.onClick);
-            }
+    //         onInit() {
+    //           window.addEventListener("hashchange", this.onHashChange);
+    //           this.scrollbar.contentEl.addEventListener("click", this.onClick);
+    //         }
     
-            onDestroy() {
-              window.removeEventListener("hashchange", this.onHashChange);
-              this.scrollbar.contentEl.removeEventListener("click", this.onClick);
-            }
-          }
+    //         onDestroy() {
+    //           window.removeEventListener("hashchange", this.onHashChange);
+    //           this.scrollbar.contentEl.removeEventListener("click", this.onClick);
+    //         }
+    //       }
     
-          // Usage
-          Scrollbar.use(AnchorPlugin);
+    //       // Usage
+    //       Scrollbar.use(AnchorPlugin);
     
-          // Initialize Smooth Scrollbar
-          const bodyScrollBar = Scrollbar.init(document.querySelector("#scroll-container"), {
-            damping: 0.06,
-            renderByPixel: true,
-            continuousScrolling: true,
-            alwaysShowTracks: true,
-          });
+    //       // Initialize Smooth Scrollbar
+    //       const bodyScrollBar = Scrollbar.init(document.querySelector("#scroll-container"), {
+    //         damping: 0.06,
+    //         renderByPixel: true,
+    //         continuousScrolling: true,
+    //         alwaysShowTracks: true,
+    //       });
     
-          // ScrollTrigger setup
-          let scrollPositionX = 0,
-            scrollPositionY = 0;
+    //       // ScrollTrigger setup
+    //       let scrollPositionX = 0,
+    //         scrollPositionY = 0;
     
-          bodyScrollBar.addListener(({ offset }) => {
-            scrollPositionX = offset.x;
-            scrollPositionY = offset.y;
-          });
+    //       bodyScrollBar.addListener(({ offset }) => {
+    //         scrollPositionX = offset.x;
+    //         scrollPositionY = offset.y;
+    //       });
     
-          bodyScrollBar.setPosition(0, 0);
-          bodyScrollBar.track.xAxis.element.remove();
+    //       bodyScrollBar.setPosition(0, 0);
+    //       bodyScrollBar.track.xAxis.element.remove();
     
-          // Handle nested scrollable elements with "tt-overflow" class
-          if ($(".tt-overflow").length) {
-            $(".tt-overflow").each(function () {
-              const $this = $(this);
-              if ($this[0].scrollWidth > $this[0].clientWidth || $this[0].scrollHeight > $this[0].clientHeight) {
-                $this.on("wheel", (e) => e.stopPropagation());
-              }
-            });
-          }
+    //       // Handle nested scrollable elements with "tt-overflow" class
+    //       if ($(".tt-overflow").length) {
+    //         $(".tt-overflow").each(function () {
+    //           const $this = $(this);
+    //           if ($this[0].scrollWidth > $this[0].clientWidth || $this[0].scrollHeight > $this[0].clientHeight) {
+    //             $this.on("wheel", (e) => e.stopPropagation());
+    //           }
+    //         });
+    //       }
     
-          // Prevent input[type=number] from scrolling on focus
-          $("input[type=number]").on("focus", function () {
-            $(this).on("wheel", (e) => e.stopPropagation());
-          });
-        }
-      }
-    },
+    //       // Prevent input[type=number] from scrolling on focus
+    //       $("input[type=number]").on("focus", function () {
+    //         $(this).on("wheel", (e) => e.stopPropagation());
+    //       });
+    //     }
+    //   }
+    // },
     
     dropdown: function () {
       const selectedAll = document.querySelectorAll(".wrapper-dropdown");
@@ -496,19 +496,19 @@
         $(".video .video-box").show("slow");
       });
     },
-    jsSlider: function () {
-      $(".js-slider").ionRangeSlider({
-        skin: "big",
-        type: "double",
-        grid: false,
-        min: 0,
-        max: 100,
-        from: 20,
-        to: 80,
-        hide_min_max: true,
-        hide_from_to: true,
-    });
-    }
+    // jsSlider: function () {
+    //   $(".js-slider").ionRangeSlider({
+    //     skin: "big",
+    //     type: "double",
+    //     grid: false,
+    //     min: 0,
+    //     max: 100,
+    //     from: 20,
+    //     to: 80,
+    //     hide_min_max: true,
+    //     hide_from_to: true,
+    // });
+    // }
   }
   Init.i();
 })(window, document, jQuery);
