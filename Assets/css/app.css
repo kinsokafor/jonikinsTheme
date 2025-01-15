@@ -2319,6 +2319,7 @@ nav .navbar-toggler:focus {
   top: 0;
   left: 0;
   z-index: 999;
+  background: rgba(37, 37, 37, 0.588);
 }
 .header.st-1 nav .navbar-collapse {
   align-items: center;
