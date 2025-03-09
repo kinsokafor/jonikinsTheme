@@ -99,28 +99,8 @@
                                 <a class="navbar-brand" href="index.html"><img alt="" src="@yield('assets')media/logo.png"></a>
                             </div>
                             <div class="col-xl-6 text-end">
-                                <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-                                    <i class="fas fa-bars"></i>
-                                </button>
-                                <div class="collapse navbar-collapse justify-content-center text-start" id="mynavbar">
-                                    <ul class="navbar-nav mainmenu m-0">
-                                        <li class="menu-item-has-children">
-                                            <a href="index.html">Home</a>
-                                        </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="about.html">About</a>
-                                        </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="properties.html">Properties</a>
-                                        </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="properties-detail.html">Property Details</a>
-                                        </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="contact.html" class="active">Contact</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                @component('components.nav')
+                                @endcomponent
                             </div>
                             <div class="col-xl-3 d-xl-block d-none">
                                 <a href="tel:123" class="phone-link"><i class="fal fa-phone-alt"></i> +1 234 567 890</a>
