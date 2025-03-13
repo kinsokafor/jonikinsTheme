@@ -140,24 +140,24 @@
                                 </div>
                                 <div class="col-xl-3 col-lg-3 col-12 mb-5">
                                     <h4 class="title">Location</h4>
-                                    <p class="fs-19 lh-130 color-gray mb-12 font-sec">123 Street, Your City, State and Country.</p>
+                                    <!-- <p class="fs-19 lh-130 color-gray mb-12 font-sec">123 Street, Your City, State and Country.</p> -->
                                     <p class="fs-19 lh-130 color-gray mb-24 font-sec mb-5">123 Street, Your City, State and Country.</p>
                                     <h4 class="title">Timing</h4>
                                     <p class="fw-5 fs-19 lh-130 ls-2 color-gray mb-12 font-sec">Mon-Sat, 9AM - 5PM</p>
                                     <p class="fw-5 fs-19 lh-130 ls-2 color-gray mb-0 font-sec">Sunday Off</p>
                                 </div>
                                 <div class="col-xl-4 col-lg-4 offset-lg-1 col-sm-8 mb-5 newsletter">
-                                    <h2 class="title">Subscribe Our Newsletter</h2>
-                                    <form action="./index.html">
+                                    <!-- <h2 class="title">Subscribe Our Newsletter</h2> -->
+                                    <!-- <form action="./index.html">
                                         <div class="input-group">
                                             <input type="email" class="form-control" id="email" name="email" required="" placeholder="Your Email">
                                             <button type="submit"><i class="fas fa-paper-plane"></i></button>
                                         </div>
-                                    </form>
+                                    </form> -->
                                 </div>
                                 <div class="col-xl-2 col-lg-3 offset-xl-2 offset-lg-1 col-12 mb-5 ">
                                     <h4 class="title">Contact Us</h4>
-                                    <a href="" class="fw-6 fs-19 color-gray mb-12 d-block color-hover font-sec">+1 123 456 789</a>
+                                    <!-- <a href="" class="fw-6 fs-19 color-gray mb-12 d-block color-hover font-sec">+1 123 456 789</a> -->
                                     <a href="" class="fw-6 fs-19 color-gray mb-12 d-block color-hover font-sec">+1 123 456 789</a>
                                     <a href="" class="fw-4 fs-19 color-gray mb-24 color-hover text-lowercase font-sec  mb-5">info@homelyexample.com</a>
                                     <h4 class="title">Follow Us</h4>
