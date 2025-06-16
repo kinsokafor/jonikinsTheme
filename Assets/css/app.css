@@ -91,6 +91,7 @@ section:after {
   position: relative;
   margin-bottom: 0;
   color: #797D86;
+  border-bottom: 1px solid #797D86;
 }
 .form-control:focus {
   outline: 0;
